@@ -9,3 +9,7 @@ an integer array and returns true if it is a hollow array, else false.
 
 
 // Solution
+
+function isHollow(x){
+  return /^(1*)0{3,}\1$/.test(x.map(x=>x?1:0).join(''))
+}
