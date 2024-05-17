@@ -15,3 +15,11 @@ function isHollow(x){
 }
 
 // or
+
+function isHollow(x){
+  while(x.length >= 3 && x[0] != 0 && x[x.length-1] != 0){
+    x.shift();
+    x.pop();
+  }
+  return /^[0]{3,}$/g.test(x.join(''));
+}
